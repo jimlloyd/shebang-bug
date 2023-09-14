@@ -2,6 +2,13 @@
   "name": "shebang-bug",
   "module": "index.ts",
   "type": "module",
+  "bin": {
+    "shebang-bug-app": "dist/app.js",
+    "shebang-bug-app-sub1": "dist/app-sub1.js"
+  },
+  "scripts": {
+    "preinstall": "bun build cli/app.ts cli/app-sub1.ts --outdir dist"
+  },
   "devDependencies": {
     "@types/commander": "^2.12.2",
     "bun-types": "latest"
